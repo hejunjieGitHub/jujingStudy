@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 多彩的console.log
+    console.log('%cHello world','color:green;background:yellow;font-size:30px');
+
+    console.log("多个标识符:%cHello %cWorld","color:red","color:yellow");
+
+    const getStyle = (color='blue',fontSize='24px',bg='pink') => {
+        return [
+            `color:${color}`,
+            `font-size:${fontSize}`,
+            `background:${bg}`
+        ].join(";")
+    }
+    console.log("%c我叫贺俊杰",getStyle('red','30px','pink'))
+    console.info("%c这是info日志",getStyle());
+    console.error("%c这是error日志",getStyle("black"))
+    console.warn("%c这是warn日志",getStyle("green"))
+    console.debug("%c这是debug日志",getStyle("blue",'30px',"yellow"))
+
+    const a = {
+        name:"贺俊杰",
+        age:24
+    };
+    console.table(`%c${a}`,getStyle())
+    console.trace(a)
+</script>
+</html>
